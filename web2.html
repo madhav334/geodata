@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Continents and Countries</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <header>
+        <h1>GeoData: Explore the World of Continents and Countries</h1>
+    </header>
+    <div>
+<p>
+    Welcome to GeoData, your gateway to discovering the diverse continents and countries that make up our fascinating planet. Whether you're a geography enthusiast or just looking to learn more about the world around you, GeoData provides an interactive and engaging way to explore each continent, view detailed country profiles, and discover unique facts about every corner of the globe. Dive into rich data on countries, including their flags, capitals, population, and more. Start your journey now and explore the wonders of the Earth with just a click!
+</p>
+</div>
+    <main>
+        <!-- Continent Section with background image linked to javascript code for api -->
+        <div class="continent-grid" id="continent-grid">
+            <div class="continent" onclick="showCountries('Asia')">
+                <div class="continent-image" style="background-image: url('photoes/Osaka-Castle-Cherry-Blossom.webp');"></div>
+                <span>Asia</span>
+            </div>
+            <div class="continent" onclick="showCountries('Africa')">
+                <div class="continent-image" style="background-image: url('photoes/group-elephants-big-green-tree-wilderness_181624-16897.webp');"></div>
+                <span>Africa</span>
+            </div>
+            <div class="continent" onclick="showCountries('North America')">
+                <div class="continent-image" style="background-image: url('photoes/stock-photo-aerial-view-of-the-north-tower-of-golden-gate-bridge-and-marin-county-fly-over.jpg');"></div>
+                <span>North America</span>
+            </div>
+            <div class="continent" onclick="showCountries('South America')">
+                <div class="continent-image" style="background-image: url('photoes/f-cary-snyder-76L0Hup2Zyo-unsplash_600x600.webp');"></div>
+                <span>South America</span>
+            </div>
+            <div class="continent" onclick="showCountries('Europe')">
+                <div class="continent-image" style="background-image: url('photoes/chris-karidis-nnzkZNYWHaU-unsplash_600x600.webp');"></div>
+                <span>Europe</span>
+            </div>
+            <div class="continent" onclick="showCountries('Oceania')">
+                <div class="continent-image" style="background-image:url('photoes/sydney-harbour02.webp');"></div>
+                <span>Oceania</span>
+            </div>
+        </div>
+
+        <!-- Countries Section -->
+        <div id="countries-section" class="countries-section" style="display: none;">
+            <button onclick="goBackToContinents()">Back to Continents</button>
+            <!-- helps to get back to continent menu -->
+            <h2 id="continent-name"></h2>
+            <div class="countries-list" id="countries-list">
+                <!-- Country list will be populated dynamically -->
+            </div>
+        </div>
+
+        <!-- Country Info Section -->
+        <div id="country-info-section" class="country-info-section" style="display: none;">
+            <button onclick="goBackToCountryList()">Back to Country List</button>
+            <div id="country-details">
+                <!-- Country details will be shown here -->
+            </div>
+        </div>
+    </main>  
+<!-- javascript link section -->
+    <script src="script.js"></script>
+</body>
+</html>

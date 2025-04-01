@@ -1,0 +1,169 @@
+* {/* for all elments  */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(164, 240, 204);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background-color: #a6ebbc;
+    padding: 1rem;
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    margin: 0;
+}
+
+.continent-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 2rem;
+    justify-items:auto ;
+}
+
+.continent {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    background-color: #4CAF50;
+    color: rgb(178, 29, 29);
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.continent:hover {
+    transform: scale(1.05);
+}
+
+.continent-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.continent:hover .continent-image {
+    opacity: 1;
+    
+}
+
+.continent span {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    color: white;
+}
+
+.countries-section,
+.country-info-section {
+    padding: 2rem;
+    text-align: center;
+}
+
+.countries-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    margin-top: 20px;
+}
+
+.country-box {
+    position: relative;
+    width: 180px;
+    height: 200px;
+    background-color: #64dba4;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+.country-box:hover {
+    transform: scale(1.05);
+}
+
+.country-box img {
+    width: 50px;
+    height: 30px;
+    object-fit: cover;  /* image will be well fit inside box */
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.country-box span {
+    position: absolute; /* position relative  to closest element */
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);  /* slight shadow */
+}
+
+button {
+    padding: 10px 20px; /* create space inside button */
+    font-size: 1rem;
+    background-color: #0c8669;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;  /*give cursor to point  */
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: #9ce4a0; /* for background colour when hovering */
+}
+
+
+@media (max-width: 768px) {
+    .continent-grid {
+        grid-template-columns: repeat(2, 1fr);  /* 2 boxes per row on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .continent-grid {
+        grid-template-columns: 1fr;  /* 1 box per row on extra small screens */
+    }
+}
+/* Styling all paragraphs */
+p {
+    font-size: 16px;          /*  font size */
+    line-height: 1.5;         /*  line height  */
+    color: #333;              /*  text color */
+    text-align: justify;      /* Align  left and right */
+    margin: 20px 0;           /*  space above and below */
+    padding: 10px;            /*  padding*/
+    background-color: #91dcd0; /* background color */
+    border-left: 5px solid #4CAF50; /* left border */
+}
+
+/*  hover effect */
+p:hover {
+    color: #075429;  /*  text color on hover */
+    background-color: #e0e0e0; /* Change background color on hover */
+}
+
